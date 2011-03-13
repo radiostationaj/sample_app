@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.5'
 
 group :development do
-  gem 'rspec-rails
+  gem 'rspec-rails', '2.5.0'
 end
 
 group :test do
