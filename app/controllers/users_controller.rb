@@ -50,7 +50,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     if current_user.admin == true && current_user == @user
-      flash[:error] = "You can't delete yourself if you are an Administrator!"
+      flash[:error] = "You can't delete yourself #{@user.name} if you are an Administrator!"
       redirect_to users_path
     else
       @user.destroy
